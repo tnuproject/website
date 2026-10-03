@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NebulaOS - Fast, Elegant, Fluid Desktop OS</title>
+  <meta name="description" content="Download NebulaOS Stable, NebulaOS Delta, and MyNebula for Android. A modern Debian + GNOME desktop operating system with seamless mobile integration.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Background -->
+  <div class="ambient-glow top-left"></div>
+  <div class="ambient-glow center-right"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <img src="assets/logo.svg" alt="NebulaOS Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-name">Nebula<span>OS</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#downloads">Downloads</a>
+        <a href="#companion">Android App</a>
+        <a href="#specs">Requirements</a>
+        <a href="https://github.com/tnuproject/nebulaos" target="_blank" rel="noopener" class="nav-github-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>NebulaOS 26.0 • Apollo Edition</span>
+      </div>
+      <h1 class="hero-title">
+        The Desktop Operating System,<br>
+        <span class="gradient-text">Refined & Elevated.</span>
+      </h1>
+      <p class="hero-description">
+        Built on solid Debian Linux + GNOME foundations with a deeply integrated Android companion ecosystem,
+        fluid motion physics, and atomic delta updates.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#downloads" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          Get NebulaOS
+        </a>
+        <a href="#companion" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+          Get MyNebula Android
+        </a>
+      </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="downloads-section">
+      <div class="section-header">
+        <h2 class="section-title">Select Your Edition</h2>
+        <p class="section-subtitle">Choose between the rock-solid Stable release or the fast-paced rolling Delta channel.</p>
+      </div>
+
+      <div class="downloads-grid">
+
+        <!-- Stable Card -->
+        <article class="download-card stable-card" id="card-stable">
+          <div class="card-badge badge-stable">Stable Release</div>
+          <div class="card-header">
+            <h3 class="card-title">NebulaOS Stable</h3>
+            <p class="card-tagline">Recommended for workstations and production machines.</p>
+          </div>
+
+          <div class="version-meta">
+            <div class="meta-item">
+              <span class="meta-label">Version</span>
+              <span class="meta-value" id="stable-version">Loading...</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Architecture</span>
+              <span class="meta-value">x86_64 (64-bit)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" id="stable-size">~3.2 GB</span>
+            </div>
+          </div>
+
+          <ul class="card-features">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Standard official build stream
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Maximum stability and compatibility
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Curated system updates
+            </li>
+          </ul>
+
+          <div class="card-action">
+            <a href="https://github.com/tnuproject/nebulaos/releases/latest" id="btn-download-stable" class="btn btn-download btn-stable" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              <span id="btn-stable-text">Download Stable ISO</span>
+            </a>
+            <div class="aux-links">
+              <a href="#" id="stable-sha-link" class="aux-link" target="_blank" rel="noopener">SHA256 Checksum</a>
+              <span class="aux-separator">•</span>
+              <a href="https://github.com/tnuproject/nebulaos/releases" class="aux-link" target="_blank" rel="noopener">Release Notes</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Delta Card -->
+        <article class="download-card delta-card" id="card-delta">
+          <div class="card-badge badge-delta">Delta Channel • Fast Ring</div>
+          <div class="card-header">
+            <h3 class="card-title">NebulaOS Delta</h3>
+            <p class="card-tagline">Continuous delivery pre-releases with progressive revisions.</p>
+          </div>
+
+          <div class="version-meta">
+            <div class="meta-item">
+              <span class="meta-label">Revision</span>
+              <span class="meta-value" id="delta-version">26.0-delta.rev2</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Architecture</span>
+              <span class="meta-value">x86_64 (64-bit)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" id="delta-size">~3.2 GB</span>
+            </div>
+          </div>
+
+          <ul class="card-features">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Latest features and system patches
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Automated OTA delta revision upgrades (-rev1 &rarr; -rev2)
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Strict downgrade-protection built-in
+            </li>
+          </ul>
+
+          <div class="card-action">
+            <a href="https://github.com/tnuproject/nebulaos/releases/download/v26.0-delta.rev2/NebulaOS-26.0-delta.rev2-Apollo-x86_64.iso" id="btn-download-delta" class="btn btn-download btn-delta" target="_blank" rel="noopener" download="NebulaOS-26.0-delta.rev2-Apollo-x86_64.iso">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              <span id="btn-delta-text">Download Delta ISO</span>
+            </a>
+            <div class="aux-links">
+              <a href="https://github.com/tnuproject/nebulaos/releases/download/v26.0-delta.rev2/NebulaOS-26.0-delta.rev2-Apollo-x86_64.iso.sha256" id="delta-sha-link" class="aux-link" target="_blank" rel="noopener">SHA256 Checksum</a>
+              <span class="aux-separator">•</span>
+              <a href="https://github.com/tnuproject/nebulaos/releases" class="aux-link" target="_blank" rel="noopener">Delta Changelog</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MyNebula Companion Section -->
+    <section id="companion" class="companion-section">
+      <div class="companion-card">
+        <div class="companion-content">
+          <div class="card-badge badge-companion">Mobile Integration</div>
+          <h2 class="companion-title">MyNebula for Android</h2>
+          <p class="companion-description">
+            Seamlessly bridge your phone with NebulaOS desktop. Connect over your local network with zero cloud dependencies.
+          </p>
+
+          <div class="companion-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <strong>Real-time Gallery Sync</strong>
+                <span>Bidirectional photo sync directly to your PC Pictures folder.</span>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <strong>Phone Screen Mirroring</strong>
+                <span>Request wireless screenshare straight from the PC Topbar Control Panel.</span>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <strong>PetalDrop & Notification Relay</strong>
+                <span>Instant wireless file drop and seamless notifications mirroring.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="companion-actions">
+            <a href="https://github.com/tnuproject/mynebula-android/releases/download/new/mynebula.apk" class="btn btn-download btn-companion" download>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              <span>Download mynebula.apk</span>
+            </a>
+            <a href="https://github.com/tnuproject/mynebula-android" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Android Repository</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="companion-preview">
+          <div class="phone-mockup">
+            <div class="phone-speaker"></div>
+            <div class="phone-screen">
+              <div class="phone-app-header">
+                <span class="phone-app-title">MyNebula</span>
+                <span class="phone-app-status">● Connected</span>
+              </div>
+              <div class="phone-card-preview">
+                <div class="preview-badge">Gallery Sync</div>
+                <div class="preview-text">Automatic 2-way sync enabled</div>
+                <div class="preview-progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+              <div class="phone-card-preview">
+                <div class="preview-badge">Screen Mirror</div>
+                <div class="preview-text">PC requested screen access</div>
+                <div class="preview-buttons">
+                  <span class="phone-btn reject">Deny</span>
+                  <span class="phone-btn accept">Allow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Requirements Section -->
+    <section id="specs" class="specs-section">
+      <div class="section-header">
+        <h2 class="section-title">Hardware Requirements</h2>
+        <p class="section-subtitle">NebulaOS is engineered to be lightweight, responsive, and compatible with modern and legacy systems.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="14" x2="23" y2="14"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="14" x2="4" y2="14"/>
+            </svg>
+          </div>
+          <div class="spec-label">Processor</div>
+          <div class="spec-val">64-bit Intel or AMD</div>
+          <div class="spec-note">Dual-core 2.0 GHz or higher</div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <line x1="4" y1="10" x2="20" y2="10"/>
+              <line x1="10" y1="4" x2="10" y2="10"/>
+            </svg>
+          </div>
+          <div class="spec-label">Memory</div>
+          <div class="spec-val">4 GB RAM</div>
+          <div class="spec-note">8 GB recommended for optimal multi-tasking</div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <div class="spec-label">Storage</div>
+          <div class="spec-val">25 GB Free Space</div>
+          <div class="spec-note">SSD recommended for ultra-fast boot</div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div class="spec-label">Bootloader</div>
+          <div class="spec-val">UEFI & Legacy BIOS</div>
+          <div class="spec-note">Secure Boot compatible hybrid ISO</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="NebulaOS" width="24" height="24">
+        <span>NebulaOS Project</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 NebulaOS Developers. Open source Linux distribution based on Debian and GNOME.</p>
+      <div class="footer-links">
+        <a href="https://github.com/tnuproject/nebulaos" target="_blank" rel="noopener">NebulaOS GitHub</a>
+        <a href="https://github.com/tnuproject/mynebula-android" target="_blank" rel="noopener">MyNebula Android</a>
+        <a href="https://github.com/tnuproject/nebulaos/releases" target="_blank" rel="noopener">Releases</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
